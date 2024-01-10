@@ -3,6 +3,16 @@
 // Подсказка: имена классов пишем с большой буквы
 
 //Ваш код
+class Worker {
+	constructor(name, surname) {
+		this.name = name;
+		this.surname = surname;
+	}
+
+	fullName() {
+		return this.surname + ', ' + this.name;
+	}
+}
 
 //Создаём объекта на основе класса Worker
 const worker = new Worker('Имя', 'Фамилия');
@@ -23,6 +33,21 @@ console.log(worker2.fullName());
 //Создайте класс Car. Класс должен содержать свойства brand, model и year. Создайте на его основе объект car и выведите его свойства в консоль.
 
 //Ваш код
+class Car {
+	constructor(brand, model, year) {
+		this.brand = brand;
+		this.model = model;
+		this.year = year;
+	}
+
+	getAge() {
+		let date = new Date();
+		return date.getFullYear() - this.year
+	}
+}
+
+const car = new Car ('Ford', 'Courier', 2022);
+console.log(car.brand, car.model, car.year);
 
 //Задание 4
 //Добавьте в класс Car метод getAge, который будет возвращать возраст машины (текущий год минус год выпуска). Создайте объект car2 на основе класса Car и выведите его возраст в консоль с помощью метода getAge.
@@ -38,68 +63,150 @@ console.log(car2.getAge());
 //Создайте класс Rectangle. Класс должен содержать свойства width и height. Создайте на его основе объект rectangle и выведите его свойства в консоль.
 
 //Ваш код
+class Rectangle {
+	constructor (width, height) {
+		this.width = width;
+		this.height = height;
+	}
+
+	getArea() {
+		return this.width * this.height
+	}
+}
+
+const rectangle = new Rectangle (30, 50);
+console.log(rectangle.width, rectangle.height);//или
+console.log(rectangle);
 
 //Задание 6
 //Добавьте в класс Rectangle метод getArea, который будет возвращать площадь прямоугольника (произведение ширины и высоты). Создайте объект rectangle2 на основе класса Rectangle и выведите его площадь в консоль с помощью метода getArea.
 
 //Ваш код
+const rectangle2 = new Rectangle(5,5);
+console.log(rectangle2.getArea());
 
 //Задание 7
 //Создайте класс Circle. Класс должен содержать свойство radius. Создайте на его основе объект circle и выведите его свойство в консоль.
 
 //Ваш код
+class Circle {
+	constructor (radius) {
+		this.radius = radius
+	}
+
+	calculateArea() {
+		return (this.radius**2)*3.14
+	}
+}
+
+const circle = new Circle (7);
+console.log(circle.radius);
 
 //Задание 8
 //Добавьте в класс Circle метод calculateArea, который будет вычислять и возвращать площадь круга. Формула для расчета площади круга: площадь = радиус * радиус * 3.14. Создайте объект circle2 на основе класса Circle с радиусом 3 и выведите его площадь круга в консоль с помощью метода calculateArea.
 
 //Ваш код
+const circle2 = new Circle (3);
+console.log(circle2.calculateArea());
 
 //Задание 9
 //Создайте класс Student. Класс должен содержать свойства name, age и grade. Создайте на его основе объект student и выведите его свойства в консоль.
 
 //Ваш код
+class Student {
+	constructor (name, age, grade) {
+		this.name = name;
+		this.age = age;
+		this.grade = grade;
+	}
+
+	increaseGrade() {
+		this.grade +=1;
+		return this.grade;
+	}
+}
+
+const student = new Student ('Ivan', 19, 4);
+console.log(student);
 
 //Задание 10
 //Добавьте в класс Student метод increaseGrade, который будет увеличивать текущую оценку на 1. Создайте объект student2 на основе класса Student, увеличьте его оценку с помощью метода increaseGrade и выведите новую оценку в консоль.
 
 //Ваш код
+const student2 = new Student ('Roman', 20, 4);
+student2.increaseGrade();
+console.log(student2.grade);
 
 //Задание 11
 //Создайте класс Book. Класс должен содержать свойства title, author и year. Создайте на его основе объект book и выведите его свойства в консоль.
 
 //Ваш код
 
+class Book {
+	constructor (title, author, year) {
+		this.title = title;
+		this.author = author;
+		this.year = year;
+	}
+
+	getTitleAndAuthor() {
+		return `Название книги: ${this.title} - Автор: ${this.author}`
+	}
+}
+
+const book = new Book ('random book', 'random author', 2024);
+console.log(book);
+
 //Задание 12
 //Добавьте в класс Book метод getTitleAndAuthor, который будет возвращать строку в формате "Название книги - Автор". Создайте объект book2 на основе класса Book и выведите его название и автора в консоль с помощью метода getTitleAndAuthor.
 
 //Ваш код
+const book2 = new Book ('Грокаем алгоритмы', 'Адитья Бхаргава', 2017);
+console.log(book2.getTitleAndAuthor());
 
 //Задание 13
 //Создайте класс BankAccount. Класс должен содержать свойства accountNumber и balance. Создайте на его основе объект account и выведите его свойства в консоль.
 
 //Ваш код
+class BankAccount {
+	constructor (accountNumber, balance) {
+		this.accountNumber = accountNumber;
+		this.balance = balance;
+	}
+
+	deposit() {
+		this.balance +=500;
+		return this.balance;
+	}
+}
+
+const account = new BankAccount (555, 77777);
+console.log(account);
 
 //Задание 14
 //Добавьте в класс BankAccount метод deposit, который будет увеличивать баланс на заданную сумму. Создайте объект account2 на основе класса BankAccount, пополните его баланс с помощью метода deposit и выведите новый баланс в консоль.
 
 //Ваш код
+const account2 = new BankAccount(666, 500);
+account2.deposit();
+console.log(account2.balance);
 
 //Задание 15
 //В класс BankAccount добавлен метод withdraw, который уменьшает баланс на заданную сумму. Если запрошенная сумма превышает текущий баланс, выведите сообщение "Недостаточно средств". Создайте объект account3 на основе класса BankAccount, попробуйте снять с него сумму, превышающую баланс, и выведите соответствующее сообщение в консоль.
 
-class BankAccount {
-	constructor(balance) {
-		this.balance = balance;
-	}
+// class BankAccount {
+// 	constructor(balance) {
+// 		this.balance = balance;
+// 	}
 
-	withdraw(amount) {
-		if (amount <= this.balance) {
-			//Уменьшите баланс на заданную сумму
-		} else {
-			//Выводите в консоль сообщение
-		}
-	}
-}
+// 	withdraw(amount) {
+// 		if (amount <= this.balance) {
+// 			//Уменьшите баланс на заданную сумму
+// 		} else {
+// 			//Выводите в консоль сообщение
+// 		}
+// 	}
+// }
 //Создайте объект account3 на основе класса BankAccount
 //Попытайтесь снять сумму, превышающую баланс
 
