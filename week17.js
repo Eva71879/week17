@@ -395,18 +395,49 @@ console.log(product2.calculateTotalPrice());
 //Создайте класс Triangle. Класс должен содержать свойства side1, side2 и side3, которые представляют длины сторон треугольника. Создайте на его основе объект triangle и выведите его свойства в консоль.
 
 //Ваш код
+class Triangle {
+	constructor (side1, side2, side3) {
+		this.side1 = side1;
+		this.side2 = side2;
+		this.side3 = side3;
+	}
+
+	calculatePerimeter () {
+		return this.side1 + this.side2 + this.side3
+	}
+}
+
+const triangle = new Triangle (10, 15, 20);
+console.log(triangle);
 
 //Задание 28
 //Добавьте в класс Triangle метод calculatePerimeter, который будет возвращать периметр треугольника (сумма длин всех сторон). Создайте объект triangle2 на основе класса Triangle со сторонами 3, 4 и 5. Выведите периметр треугольника в консоль с помощью метода calculatePerimeter.
 
 //Ваш код
 
+const triangle2 = new Triangle (3, 4, 5);
+console.log(triangle2.calculatePerimeter());
+
 //Задание 29
 //Создайте класс Square. Класс должен содержать свойство side, представляющее длину стороны квадрата. Создайте на его основе объект square и выведите его свойство в консоль.
 
 //Ваш код
+class Square {
+	constructor (side) {
+		this.side = side
+	}
+
+	calculateArea () {
+		return this.side * this.side
+	}
+}
+
+const square = new Square (6);
+console.log(square);
 
 //Задание 30
 //Добавьте в класс Square метод calculateArea, который будет вычислять и возвращать площадь квадрата (произведение длины стороны на саму себя). Создайте объект square2 на основе класса Square со стороной 5 и выведите его площадь квадрата в консоль с помощью метода calculateArea.
 
 //Ваш код
+const square2 = new Square (5);
+console.log(square2.calculateArea());
