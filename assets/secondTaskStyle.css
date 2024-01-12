@@ -1,0 +1,47 @@
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.vehicals {
+    margin: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.img {
+    outline: 1px solid black;
+    object-fit: cover;
+    width: 100%;
+    height: 170px;
+}
+
+.border {
+    outline: 1px solid black;
+    width: 20%;
+}
+
+.vehicals__container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+}
+
+.vehicals__container_cars, .vehicals__container_bikes {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 50px;
+    width: 100%;
+}
